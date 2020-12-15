@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Nasa } from '../nasa';
+import { NasaService } from '../nasa.service';
 
 @Component({
   selector: 'app-nasa',
@@ -22,4 +22,5 @@ export class NasaComponent implements OnInit {
       this.results = data[0].shortdef;
       this.displayWord = this.searchTerm;
     });
+  }
 }
