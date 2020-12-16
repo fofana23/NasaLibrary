@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NasaComponent } from './nasa/nasa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NasaService } from './services/nasa.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,13 @@ import { NasaComponent } from './nasa/nasa.component';
     NasaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    NasaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

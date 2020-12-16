@@ -1,4 +1,4 @@
-import { Collection } from '../collection';
+import { Collection } from '../models/collection';
 
 export interface RootObject {
     collection: Collection;

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NasaService } from '../nasa.service';
+import { NasaService } from '../services/nasa.service';
 
 @Component({
   selector: 'app-nasa',
-  templateUrl: './nasa.component.html',
+  // templateUrl: './nasa.component.html',
   styleUrls: ['./nasa.component.css']
 })
 export class NasaComponent implements OnInit {
@@ -11,6 +11,7 @@ export class NasaComponent implements OnInit {
   searchTerm: string;
   displayWord: string;
   results: Array<any>;
+
   constructor(private service: NasaService) { }
 
 
