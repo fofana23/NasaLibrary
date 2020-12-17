@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../models/item';
 import { NasaService } from '../services/nasa.service';
 
 @Component({
   selector: 'app-nasa',
-  // templateUrl: './nasa.component.html',
+  templateUrl: './nasa.component.html',
   styleUrls: ['./nasa.component.css']
 })
 export class NasaComponent implements OnInit {
 
   searchTerm: string;
   displayWord: string;
-  results: Array<any>;
+  items: Array<Item>;
 
   constructor(private service: NasaService) { }
 
@@ -18,10 +19,11 @@ export class NasaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  seachWord(){
+  searchWord(){
     this.service.getDefinition(this.searchTerm).subscribe(data => {
-      this.results = data[0].shortdef;
+      this.items = data.collection.items;
       this.displayWord = this.searchTerm;
-    });
+    },
+    error => console.log(error));
   }
 }

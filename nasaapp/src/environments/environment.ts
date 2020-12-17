@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "https://api.nasa.gov/planetary/apod?api_key=MM3PpRYw1Ge6kiplvkWhYvjJHoOao1YawAFrJQCR",
-  apiKey:"MM3PpRYw1Ge6kiplvkWhYvjJHoOao1YawAFrJQCR"
+  baseUrl: "https://images.nasa.gov/search-results?q=",
 };
 
 /*

@@ -5,14 +5,14 @@
             <div class="w3-card">
               <div class="w3-container">
                   <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"></a>
-                  <div class="w3-section">      
+                  <div class="w3-section">
                       <input [(ngModel)] ="searchTerm" class="w3-input" type="text" required (keyup.enter) = "searchWord()">
                       <label>Search</label>
-                      <i class="fa fa-search" (click) = "seachWord()"></i>
+                      <i class="fa fa-search" (click) = "searchWord()"></i>
                     </div>
                 <h3 *ngIf = "displayWord">{{displayWord}}</h3>
-                <p *ngFor = "let definition of results">{{definition}}</p>
-                
+                <p *ngFor = "let item of items">{{item.data.title}}</p>
+
               </div>
     </div>
 </div>
